@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Singleton_Demo
@@ -10,9 +11,13 @@ namespace Singleton_Demo
     {
         static void Main(string[] args)
         {
-            Logger.Instance.Log("Hallo Welt");
-            Logger.Instance.Log("Das ist ein Test");
-            Logger.Instance.Log("Demo 1234");
+
+            Parallel.For(0, 1000, i =>
+              {
+                  Thread.Sleep(10);
+                  Logger.Instance.Log(i.ToString());
+              });
+
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();

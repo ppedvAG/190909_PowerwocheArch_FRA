@@ -10,18 +10,23 @@ namespace Singleton_Demo
     {
         private Logger()
         {
-
+            instanceCounter++;
         }
 
+        private static object lockObject = new object();
+        private static int instanceCounter;
         //propfull + TAB + TAB
-
         private static Logger instance;
         public static Logger Instance
         {
             get
             {
                 if (instance == null)
-                    instance = new Logger();
+                    lock (lockObject)
+                    {
+                        if (instance == null)
+                            instance = new Logger();
+                    }
                 return instance;
             }
         }
@@ -31,7 +36,7 @@ namespace Singleton_Demo
         public void Log(string message)
         {
             Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.WriteLine($"[{DateTime.Now.ToShortTimeString()}]: {message}");
+            Console.WriteLine($"{instanceCounter}[{DateTime.Now.ToShortTimeString()}]: {message}");
             Console.ResetColor();
         }
     }
