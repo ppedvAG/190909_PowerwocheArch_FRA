@@ -4,6 +4,13 @@ namespace Fassade_Demo
 {
     class VersandService
     {
+        private IOutput defaultOutput;
+
+        public VersandService(IOutput defaultOutput)
+        {
+            this.defaultOutput = defaultOutput;
+        }
+
         //public void VersendeMitDHL()
         //{
         //    Console.WriteLine("Paket wird mit DHL versendet");
@@ -11,7 +18,7 @@ namespace Fassade_Demo
 
         public void VersendeMitDPD()
         {
-            Console.WriteLine("Paket wird mit DPD versendet");
+            defaultOutput.WriteOutput("Paket wird mit DPD versendet");
         }
     }
 }

@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Amazon.cs" />
+    <Compile Include="IOutput.cs" />
     <Compile Include="LagerService.cs" />
     <Compile Include="MailService.cs" />
     <Compile Include="Program.cs" />

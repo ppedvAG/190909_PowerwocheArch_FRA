@@ -8,21 +8,30 @@ namespace Fassade_Demo
 {
     class Amazon
     {
-        MailService ms = new MailService();
-        LagerService ls = new LagerService();
-        RechnungsService rs = new RechnungsService();
-        VersandService vs = new VersandService();
+        public Amazon()
+        {
+            mailService  = new MailService(defaultOutput);
+            lagerService  = new LagerService(defaultOutput);
+            rechnungsService  = new RechnungsService(defaultOutput);
+            versandService  = new VersandService(defaultOutput);
+        }
+        IOutput defaultOutput = new DebugOutput();
+
+        private MailService mailService;
+        private LagerService lagerService;
+        private RechnungsService rechnungsService;
+        private VersandService versandService;
 
         public void BestelleWas()
         {
-            if (rs.SindRechnungenNochOffen(1234) == false)
+            if (rechnungsService.SindRechnungenNochOffen(1234) == false)
             {
-                if (ls.IstProduktAufLager("abcde") == true)
+                if (lagerService.IstProduktAufLager("abcde") == true)
                 {
-                    rs.BezahlvorgangStarten(1234);
-                    ls.ProduktNachbestellen("abcde");
-                    vs.VersendeMitDPD();
-                    ms.BestätigungsMailSenden();
+                    rechnungsService.BezahlvorgangStarten(1234);
+                    lagerService.ProduktNachbestellen("abcde");
+                    versandService.VersendeMitDPD();
+                    mailService.BestätigungsMailSenden();
                 }
             }
         }

@@ -8,9 +8,16 @@ namespace Fassade_Demo
 {
     class MailService
     {
+        private IOutput defaultOutput;
+
+        public MailService(IOutput defaultOutput)
+        {
+            this.defaultOutput = defaultOutput;
+        }
+
         public void BestätigungsMailSenden()
         {
-            Console.WriteLine("Bestätigungsmail wird gesendet...");
+            defaultOutput.WriteOutput("Bestätigungsmail wird gesendet...");
         }
     }
 }
