@@ -10,21 +10,8 @@ namespace Fassade_Demo
     {
         static void Main(string[] args)
         {
-            MailService ms = new MailService();
-            LagerService ls = new LagerService();
-            RechnungsService rs = new RechnungsService();
-            VersandService vs = new VersandService();
-
-            if(rs.SindRechnungenNochOffen(1234) == false)
-            {
-                if(ls.IstProduktAufLager("abcde") == true)
-                {
-                    rs.BezahlvorgangStarten(1234);
-                    ls.ProduktNachbestellen("abcde");
-                    vs.VersendeMitDHL();
-                    ms.BestätigungsMailSenden();
-                }
-            }
+            Amazon a = new Amazon();
+            a.BestelleWas();
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
