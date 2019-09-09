@@ -8,5 +8,10 @@ namespace FactoryMethod_Demo
         {
             Console.WriteLine("Braten mit grüner Sauce");
         }
+
+        public void Demo12345()
+        {
+
+        }
     }
 }

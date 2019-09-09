@@ -18,6 +18,11 @@ namespace FactoryMethod_Demo
 
             IEssen lecker2 = k.GibEssen(new DateTime(1848, 3, 22, 14, 52, 12));
 
+            if (lecker2 is Mittagessen mittag)
+            {
+                mittag.Demo12345();
+            }
+
             lecker2.Beschreibung();
 
             Console.WriteLine("---ENDE---");
