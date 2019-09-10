@@ -14,5 +14,6 @@ namespace ppedv.MajoDDD.Domain.Interfaces
         IEnumerable<T> GetAll<T>() where T : Entity;
         // Für LINQ:
         IQueryable<T> Query<T>() where T : Entity;
+        void Save();
     }
 }
