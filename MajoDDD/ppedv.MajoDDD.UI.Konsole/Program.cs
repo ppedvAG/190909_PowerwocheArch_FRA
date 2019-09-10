@@ -13,6 +13,7 @@ namespace ppedv.MajoDDD.UI.Konsole
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.Unicode;
             Core core = new Core(new EFRepository(new EFContext()));
 
             if (core.Repository.GetAll<Book>().Count() == 0)
@@ -24,6 +25,7 @@ namespace ppedv.MajoDDD.UI.Konsole
                 foreach (var inv in store.InventoryList)
                 {
                     Console.WriteLine($"\t{inv.Book.Title}: {inv.Amount} Stück");
+                    Console.WriteLine($"\t{inv.Book.Price}€, {inv.Book.Pages} Seiten");
                 }
             }
 
