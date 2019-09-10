@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Widerstand.Logic.HP", "Wide
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Widerstand.Logic.NI", "Widerstand.Logic.NI\Widerstand.Logic.NI.csproj", "{DEF4B386-B9FD-4EAF-9029-33C47E1F15B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Widerstandsmessung.UI.Forms", "Widerstandsmessung.UI.Forms\Widerstandsmessung.UI.Forms.csproj", "{90070D8B-2E26-4FCC-A354-3CF4C5361FD0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{DEF4B386-B9FD-4EAF-9029-33C47E1F15B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEF4B386-B9FD-4EAF-9029-33C47E1F15B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEF4B386-B9FD-4EAF-9029-33C47E1F15B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90070D8B-2E26-4FCC-A354-3CF4C5361FD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90070D8B-2E26-4FCC-A354-3CF4C5361FD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90070D8B-2E26-4FCC-A354-3CF4C5361FD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90070D8B-2E26-4FCC-A354-3CF4C5361FD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
