@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MEF_Demo", "MEF_Demo\MEF_De
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{F8C8CD95-1DBB-422B-9A05-5D105A6BF3E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logik", "Logik\Logik.csproj", "{22A45167-727D-4EAB-B072-EDBA8A75FD02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F8C8CD95-1DBB-422B-9A05-5D105A6BF3E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8C8CD95-1DBB-422B-9A05-5D105A6BF3E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8C8CD95-1DBB-422B-9A05-5D105A6BF3E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22A45167-727D-4EAB-B072-EDBA8A75FD02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22A45167-727D-4EAB-B072-EDBA8A75FD02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22A45167-727D-4EAB-B072-EDBA8A75FD02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22A45167-727D-4EAB-B072-EDBA8A75FD02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
