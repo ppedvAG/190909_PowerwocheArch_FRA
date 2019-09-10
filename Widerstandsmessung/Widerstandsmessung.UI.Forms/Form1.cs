@@ -93,6 +93,11 @@ namespace Widerstandsmessung.UI.Forms
             var ist = messgerät.Software.Berechne(listBoxSOLL.SelectedItem as SOLLWiderstand);
             textBoxLog.Text = ($"Ist-Widerstand:{Environment.NewLine}UV:{ist.UV}{Environment.NewLine}UW:{ist.UW}{Environment.NewLine}VW:{ist.VW}{Environment.NewLine}Mittelwert:{ist.Mittelwert}");
 
+            if(messgerät.Software is IMesstechnikV2 v2)
+            {
+                var istMitSpitzenwert = v2.Spitzenwert(listBoxSOLL.SelectedItem as SOLLWiderstand);
+                textBoxLog.Text += $"{Environment.NewLine}Spitzenwert: {istMitSpitzenwert.Spitzenwert}";
+            }
         }
 
         private void ComboBoxSoftware_SelectedIndexChanged(object sender, EventArgs e)

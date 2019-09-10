@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29230.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Widerstandsmessung.Domain", "Widerstandsmessung.Domain\Widerstandsmessung.Domain.csproj", "{37652CD3-465A-4339-AA86-430CD636ABC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Widerstandsmessung.Domain", "Widerstandsmessung.Domain\Widerstandsmessung.Domain.csproj", "{37652CD3-465A-4339-AA86-430CD636ABC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Widerstandsmessung.Data.EF", "Widerstandsmessung.Data.EF\Widerstandsmessung.Data.EF.csproj", "{B8C5AF1A-485C-4199-8615-4B2D7AF7A881}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Widerstandsmessung.Data.EF", "Widerstandsmessung.Data.EF\Widerstandsmessung.Data.EF.csproj", "{B8C5AF1A-485C-4199-8615-4B2D7AF7A881}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Widerstandsmessung.Logic", "Widerstandsmessung.Logic\Widerstandsmessung.Logic.csproj", "{8087D3D2-9989-4A29-ACA0-6A71708DFF62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Widerstandsmessung.Logic", "Widerstandsmessung.Logic\Widerstandsmessung.Logic.csproj", "{8087D3D2-9989-4A29-ACA0-6A71708DFF62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Widerstand.Logic.HP", "Widerstand.Logic.HP\Widerstand.Logic.HP.csproj", "{864404C0-041C-40C6-9F50-CB336393D270}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Widerstand.Logic.HP", "Widerstand.Logic.HP\Widerstand.Logic.HP.csproj", "{864404C0-041C-40C6-9F50-CB336393D270}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Widerstand.Logic.NI", "Widerstand.Logic.NI\Widerstand.Logic.NI.csproj", "{DEF4B386-B9FD-4EAF-9029-33C47E1F15B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Widerstand.Logic.NI", "Widerstand.Logic.NI\Widerstand.Logic.NI.csproj", "{DEF4B386-B9FD-4EAF-9029-33C47E1F15B9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Widerstandsmessung.UI.Forms", "Widerstandsmessung.UI.Forms\Widerstandsmessung.UI.Forms.csproj", "{90070D8B-2E26-4FCC-A354-3CF4C5361FD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Widerstand.Logic.KT", "Widerstand.Logic.KT\Widerstand.Logic.KT.csproj", "{AB04AD0B-B494-4BCC-A237-5F78511C1893}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{90070D8B-2E26-4FCC-A354-3CF4C5361FD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90070D8B-2E26-4FCC-A354-3CF4C5361FD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90070D8B-2E26-4FCC-A354-3CF4C5361FD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB04AD0B-B494-4BCC-A237-5F78511C1893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB04AD0B-B494-4BCC-A237-5F78511C1893}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB04AD0B-B494-4BCC-A237-5F78511C1893}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB04AD0B-B494-4BCC-A237-5F78511C1893}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

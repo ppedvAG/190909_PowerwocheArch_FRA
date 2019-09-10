@@ -9,6 +9,7 @@ namespace Widerstandsmessung.Domain
         public double UW { get; set; }
         public double VW { get; set; }
         public double Mittelwert { get; set; }
+        public double Spitzenwert { get; set; }
     }
 
 }
