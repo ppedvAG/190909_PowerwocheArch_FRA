@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ppedv.MajoDDD.Data.EF;
+using ppedv.MajoDDD.Domain;
+using ppedv.MajoDDD.Logic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,32 +11,38 @@ namespace ppedv.MajoDDD.UI.ASP.Controllers
 {
     public class BookController : Controller
     {
+        public BookController()
+        {
+            core = new Core(new EFRepository(new EFContext()));
+        }
+        private Core core;
+
         // GET: Book
         public ActionResult Index()
         {
-            return View();
+            return View(core.Repository.GetAll<Book>());
         }
 
         // GET: Book/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(core.Repository.GetByID<Book>(id));
         }
 
         // GET: Book/Create
         public ActionResult Create()
         {
-            return View();
+            return View(new Book { Title = "Unbenannt", Author = "Unbekannt" });
         }
 
         // POST: Book/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Book newBook)
         {
             try
             {
-                // TODO: Add insert logic here
-
+                core.Repository.Add(newBook);
+                core.Repository.Save();
                 return RedirectToAction("Index");
             }
             catch
@@ -45,16 +54,17 @@ namespace ppedv.MajoDDD.UI.ASP.Controllers
         // GET: Book/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            return View(core.Repository.GetByID<Book>(id));
         }
 
         // POST: Book/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, Book editedBook)
         {
             try
             {
-                // TODO: Add update logic here
+                core.Repository.Update(editedBook);
+                core.Repository.Save();
 
                 return RedirectToAction("Index");
             }
@@ -67,16 +77,17 @@ namespace ppedv.MajoDDD.UI.ASP.Controllers
         // GET: Book/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            return View(core.Repository.GetByID<Book>(id));
         }
 
         // POST: Book/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int id, Book deleteMe)
         {
             try
             {
-                // TODO: Add delete logic here
+                core.Repository.Delete(deleteMe);
+                core.Repository.Save();
 
                 return RedirectToAction("Index");
             }
