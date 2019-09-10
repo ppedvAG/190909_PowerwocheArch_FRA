@@ -33,7 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -48,6 +55,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ppedv.MajoDDD.Data.EF\ppedv.MajoDDD.Data.EF.csproj">
+      <Project>{A7C8DA67-86BE-441B-8381-BDE63FA0202B}</Project>
+      <Name>ppedv.MajoDDD.Data.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ppedv.MajoDDD.Domain\ppedv.MajoDDD.Domain.csproj">
+      <Project>{990B6211-EE57-48D9-86BC-8292250930BE}</Project>
+      <Name>ppedv.MajoDDD.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ppedv.MajoDDD.Logic\ppedv.MajoDDD.Logic.csproj">
+      <Project>{73ADBEB2-A211-4B9E-AFC6-6548D0236BCA}</Project>
+      <Name>ppedv.MajoDDD.Logic</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
