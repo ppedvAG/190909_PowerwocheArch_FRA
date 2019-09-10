@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MajoDDD.UI.Konsole", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MajoDDD.UI.Forms", "ppedv.MajoDDD.UI.Forms\ppedv.MajoDDD.UI.Forms.csproj", "{45D63743-0D40-4D6A-B247-5712928F7530}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MajoDDD.UI.ASP", "ppedv.MajoDDD.UI.ASP\ppedv.MajoDDD.UI.ASP.csproj", "{80EE3178-FF44-4D35-A142-4658284EF5F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{45D63743-0D40-4D6A-B247-5712928F7530}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45D63743-0D40-4D6A-B247-5712928F7530}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45D63743-0D40-4D6A-B247-5712928F7530}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80EE3178-FF44-4D35-A142-4658284EF5F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80EE3178-FF44-4D35-A142-4658284EF5F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80EE3178-FF44-4D35-A142-4658284EF5F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80EE3178-FF44-4D35-A142-4658284EF5F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{73ADBEB2-A211-4B9E-AFC6-6548D0236BCA} = {1C8ABA5F-94E9-45FA-B198-7AB1E3F7E060}
 		{C59D2E42-3820-42DF-B2B9-C69CAAC9E1CE} = {1F8BC7E2-4A81-42B6-8784-40E038C676DE}
 		{45D63743-0D40-4D6A-B247-5712928F7530} = {1F8BC7E2-4A81-42B6-8784-40E038C676DE}
+		{80EE3178-FF44-4D35-A142-4658284EF5F9} = {1F8BC7E2-4A81-42B6-8784-40E038C676DE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ACED6064-DC9C-4201-9D25-4A803EBF37DB}
