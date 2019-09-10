@@ -28,7 +28,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{990B6211-EE57-48D9-86BC-8292250930BE} = {0D8A7D8A-8801-4459-9FBE-532CC4E47195}
+		{990B6211-EE57-48D9-86BC-8292250930BE} = {F328CDA2-273A-4648-B4BF-188CB6B21C93}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ACED6064-DC9C-4201-9D25-4A803EBF37DB}
