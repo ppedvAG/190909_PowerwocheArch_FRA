@@ -9,9 +9,9 @@ namespace ppedv.MajoDDD.Data.EF
 {
     public class EFRepository : IRepository
     {
-        public EFRepository()
+        public EFRepository(EFContext context)
         {
-            context = new EFContext();
+            this.context = context;
         }
         private EFContext context;
 

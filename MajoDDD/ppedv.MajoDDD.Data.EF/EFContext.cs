@@ -8,8 +8,8 @@ namespace ppedv.MajoDDD.Data.EF
     {
         // Teilnehmerrechner
         // public EFContext() : base("Server=.;Database=MajoDDD;Trusted_Connection=true;")
-        public EFContext() : base("Server=(localdb)\\MSSQLLocalDB;Database=MajoDDD;Trusted_Connection=true;AttachDbFilename=C:\\temp\\MajoDDD.mdf")
-        { }
+        public EFContext() : this("Server=(localdb)\\MSSQLLocalDB;Database=MajoDDD;Trusted_Connection=true;AttachDbFilename=C:\\temp\\MajoDDD.mdf"){ }
+        public EFContext(string connectionString) : base(connectionString){ }
 
         public DbSet<Book> Book { get; set; }
         public DbSet<BookStore> BookStore { get; set; }
