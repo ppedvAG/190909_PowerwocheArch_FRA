@@ -6,11 +6,11 @@ namespace ppedv.MajoDDD.Logic
 {
     public class Core
     {
-        public Core(IRepository Repository)
+        public Core(IUnitOfWork UoW)
         {
-            this.Repository = Repository;
+            this.UoW = UoW;
         }
-        public IRepository Repository { get; set; }
+        public IUnitOfWork UoW { get; set; }
 
         public void GenerateTestData()
         {
@@ -35,11 +35,13 @@ namespace ppedv.MajoDDD.Logic
             bs3.InventoryList.Add(new Inventory { Book = b4, Amount = 21 });
             bs3.InventoryList.Add(new Inventory { Book = b5, Amount = 99 });
 
-            Repository.Add(bs1);
-            Repository.Add(bs2);
-            Repository.Add(bs3);
+            // Wenn man ein Spezialrepo hat:
+            UoW.BookStoreRepository.Add(bs1);
+            UoW.BookStoreRepository.Add(bs2);
+            // Alternative wenn man es Universal machen will
+            UoW.GetRepository<BookStore>().Add(bs3);
 
-            Repository.Save();
+            UoW.Save();
         }
     }
 }
