@@ -14,12 +14,12 @@ namespace ppedv.MajoDDD.UI.Konsole
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.Unicode;
-            Core core = new Core(new EFRepository(new EFContext()));
+            Core core = new Core(new EFUnitOfWork(new EFContext()));
 
-            if (core.Repository.GetAll<Book>().Count() == 0)
+            if (core.UoW.BookRepository.GetAll().Count() == 0)
                 core.GenerateTestData();
 
-            foreach (var store in core.Repository.GetAll<BookStore>())
+            foreach (var store in core.UoW.BookStoreRepository.GetAll())
             {
                 Console.WriteLine($"{store.Address}:");
                 foreach (var inv in store.InventoryList)
@@ -29,6 +29,13 @@ namespace ppedv.MajoDDD.UI.Konsole
                 }
             }
 
+            // Spezialfeatures:
+
+            var bookPrice = core.UoW.BookRepository.GetBookWithHighestPrice();
+            Console.WriteLine($"Buch mit höchstem Preis: {bookPrice.Title}");
+
+            var stück = core.UoW.BookRepository.GetTotalAmountOfBooksInCirculation(bookPrice);
+            Console.WriteLine($"Von diesem Buch gibt es insgesamt {stück} Stück");
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
