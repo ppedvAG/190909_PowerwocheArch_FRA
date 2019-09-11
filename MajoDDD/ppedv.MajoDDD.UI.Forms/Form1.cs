@@ -19,16 +19,16 @@ namespace ppedv.MajoDDD.UI.Forms
         {
             InitializeComponent();
         }
-        Core core = new Core(new EFRepository(new EFContext()));
+        Core core = new Core(new EFUnitOfWork(new EFContext()));
 
         private void DatenLadenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            dataGridViewBooks.DataSource = core.Repository.GetAll<Book>();
+            dataGridViewBooks.DataSource = core.UoW.BookRepository.GetAll();
         }
 
         private void DataGridViewBooks_CellLeave(object sender, DataGridViewCellEventArgs e)
         {
-            core.Repository.Save();
+            core.UoW.Save();
         }
     }
 }
