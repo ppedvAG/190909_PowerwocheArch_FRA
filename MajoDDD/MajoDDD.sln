@@ -17,13 +17,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ppedv.MajoDDD.Data.EF", "pp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MajoDDD.Data.EF.Tests", "ppedv.MajoDDD.Data.EF.Tests\ppedv.MajoDDD.Data.EF.Tests.csproj", "{B7EA8C62-E29A-4439-87F0-7FD027888AA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MajoDDD.Logic", "ppedv.MajoDDD.Logic\ppedv.MajoDDD.Logic.csproj", "{73ADBEB2-A211-4B9E-AFC6-6548D0236BCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ppedv.MajoDDD.Logic", "ppedv.MajoDDD.Logic\ppedv.MajoDDD.Logic.csproj", "{73ADBEB2-A211-4B9E-AFC6-6548D0236BCA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MajoDDD.UI.Konsole", "ppedv.MajoDDD.UI.Konsole\ppedv.MajoDDD.UI.Konsole.csproj", "{C59D2E42-3820-42DF-B2B9-C69CAAC9E1CE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MajoDDD.UI.Forms", "ppedv.MajoDDD.UI.Forms\ppedv.MajoDDD.UI.Forms.csproj", "{45D63743-0D40-4D6A-B247-5712928F7530}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MajoDDD.UI.ASP", "ppedv.MajoDDD.UI.ASP\ppedv.MajoDDD.UI.ASP.csproj", "{80EE3178-FF44-4D35-A142-4658284EF5F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MajoDDD.Data.Access", "ppedv.MajoDDD.Data.Access\ppedv.MajoDDD.Data.Access.csproj", "{9DA87A71-DA74-4020-BB7D-C3E586888480}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,10 @@ Global
 		{80EE3178-FF44-4D35-A142-4658284EF5F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80EE3178-FF44-4D35-A142-4658284EF5F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80EE3178-FF44-4D35-A142-4658284EF5F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DA87A71-DA74-4020-BB7D-C3E586888480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DA87A71-DA74-4020-BB7D-C3E586888480}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DA87A71-DA74-4020-BB7D-C3E586888480}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DA87A71-DA74-4020-BB7D-C3E586888480}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,6 +77,7 @@ Global
 		{C59D2E42-3820-42DF-B2B9-C69CAAC9E1CE} = {1F8BC7E2-4A81-42B6-8784-40E038C676DE}
 		{45D63743-0D40-4D6A-B247-5712928F7530} = {1F8BC7E2-4A81-42B6-8784-40E038C676DE}
 		{80EE3178-FF44-4D35-A142-4658284EF5F9} = {1F8BC7E2-4A81-42B6-8784-40E038C676DE}
+		{9DA87A71-DA74-4020-BB7D-C3E586888480} = {0D8A7D8A-8801-4459-9FBE-532CC4E47195}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ACED6064-DC9C-4201-9D25-4A803EBF37DB}

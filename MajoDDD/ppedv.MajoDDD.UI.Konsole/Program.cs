@@ -1,4 +1,5 @@
-﻿using ppedv.MajoDDD.Data.EF;
+﻿using ppedv.MajoDDD.Data.Access;
+using ppedv.MajoDDD.Data.EF;
 using ppedv.MajoDDD.Domain;
 using ppedv.MajoDDD.Logic;
 using System;
@@ -14,7 +15,7 @@ namespace ppedv.MajoDDD.UI.Konsole
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.Unicode;
-            Core core = new Core(new EFUnitOfWork(new EFContext()));
+            Core core = new Core(new EFUnitOfWork(new EFContext()),new AccessUnitOfWork());
 
             if (core.UoW.BookRepository.GetAll().Count() == 0)
                 core.GenerateTestData();
@@ -36,6 +37,10 @@ namespace ppedv.MajoDDD.UI.Konsole
 
             var stück = core.UoW.BookRepository.GetTotalAmountOfBooksInCirculation(bookPrice);
             Console.WriteLine($"Von diesem Buch gibt es insgesamt {stück} Stück");
+
+            // Access-Features
+
+            var allBooks = core.UoW_Access.BookRepository.GetAll();
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();

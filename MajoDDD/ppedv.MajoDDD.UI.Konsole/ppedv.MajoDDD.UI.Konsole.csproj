@@ -58,6 +58,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ppedv.MajoDDD.Data.Access\ppedv.MajoDDD.Data.Access.csproj">
+      <Project>{9DA87A71-DA74-4020-BB7D-C3E586888480}</Project>
+      <Name>ppedv.MajoDDD.Data.Access</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ppedv.MajoDDD.Data.EF\ppedv.MajoDDD.Data.EF.csproj">
       <Project>{A7C8DA67-86BE-441B-8381-BDE63FA0202B}</Project>
       <Name>ppedv.MajoDDD.Data.EF</Name>
@@ -70,6 +74,31 @@
       <Project>{73ADBEB2-A211-4B9E-AFC6-6548D0236BCA}</Project>
       <Name>ppedv.MajoDDD.Logic</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MajoDDD.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

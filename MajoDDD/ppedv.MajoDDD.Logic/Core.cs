@@ -6,11 +6,13 @@ namespace ppedv.MajoDDD.Logic
 {
     public class Core
     {
-        public Core(IUnitOfWork UoW)
+        public Core(IUnitOfWork UoW, IUnitOfWork UoW_Access = null)
         {
             this.UoW = UoW;
+            this.UoW_Access = UoW_Access;
         }
-        public IUnitOfWork UoW { get; set; }
+        public IUnitOfWork UoW { get; set; }     // EntityFramework als DB_Layer
+        public IUnitOfWork UoW_Access { get; set; } // XML-Dokument als DB_Layer
 
         public void GenerateTestData()
         {
