@@ -12,7 +12,7 @@ namespace ppedv.MajoDDD.Logic
             this.UoW_Access = UoW_Access;
         }
         public IUnitOfWork UoW { get; set; }     // EntityFramework als DB_Layer
-        public IUnitOfWork UoW_Access { get; set; } // XML-Dokument als DB_Layer
+        public IUnitOfWork UoW_Access { get; set; } // Access-Dokument als DB_Layer
 
         public void GenerateTestData()
         {
