@@ -8,9 +8,13 @@ namespace SOLID_Taschenrechner
 {
     class Program
     {
+        // Bootstrapping
         static void Main(string[] args)
         {
-            new KonsolenUI().Start();
+            var parser = new StringSplitParser();
+            var calculator = new IfCalculator();
+
+            new KonsolenUI(parser,calculator).Start();
         }
 
         public struct Formel
@@ -20,7 +24,12 @@ namespace SOLID_Taschenrechner
             public string Operator { get; set; }
         }
 
-        public class StringSplitParser
+
+        public interface IParser
+        {
+            Formel Parse(string input);
+        }
+        public class StringSplitParser : IParser
         {
             public Formel Parse(string input)
             {
@@ -34,7 +43,11 @@ namespace SOLID_Taschenrechner
             }
         }
 
-        public class IfCalculator
+        public interface ICalculator
+        {
+            int Calculate(Formel f);
+        }
+        public class IfCalculator : ICalculator
         {
             public int Calculate(Formel formel)
             {
@@ -49,6 +62,15 @@ namespace SOLID_Taschenrechner
 
         public class KonsolenUI
         {
+            public KonsolenUI(IParser parser, ICalculator calculator)
+            {
+                this.parser = parser;
+                this.calculator = calculator;
+            }
+            private readonly IParser parser;
+            private readonly ICalculator calculator;
+
+            // App-Workflow
             public void Start()
             {
                 // UI
@@ -56,13 +78,10 @@ namespace SOLID_Taschenrechner
                 string input = Console.ReadLine(); // "2 + 2"
 
                 // Parsen
-                var parser = new StringSplitParser();
                 Formel formel = parser.Parse(input);
 
                 // Berechnung
-                var calculator = new IfCalculator();
                 int result = calculator.Calculate(formel);
-                // .....
 
                 // UI
                 Console.WriteLine($"Das Ergebnis ist {result}");
