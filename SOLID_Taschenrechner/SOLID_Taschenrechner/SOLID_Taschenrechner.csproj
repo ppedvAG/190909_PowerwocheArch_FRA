@@ -43,11 +43,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="KonsolenUI.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Taschenrechner.Domain\Taschenrechner.Domain.csproj">
+      <Project>{A678D548-B384-47F4-99A2-8EEEE20246F6}</Project>
+      <Name>Taschenrechner.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taschenrechner.Logik\Taschenrechner.Logik.csproj">
+      <Project>{9BC4CE38-A7B5-4ABF-B131-119DA0BF73B6}</Project>
+      <Name>Taschenrechner.Logik</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taschenrechner.Rechenmodule\Taschenrechner.Rechenmodule.csproj">
+      <Project>{0A658775-A247-4C4F-900E-A98FACE3FC73}</Project>
+      <Name>Taschenrechner.Rechenmodule</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
