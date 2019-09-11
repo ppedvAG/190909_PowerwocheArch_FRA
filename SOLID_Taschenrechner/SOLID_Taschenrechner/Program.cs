@@ -13,9 +13,10 @@ namespace SOLID_Taschenrechner
         static void Main(string[] args)
         {
             var parser = new RegexParser();
-            var calculator = new ModularCalculator(new Addition(),new Subtraktion());
+            var calculator = new ModularCalculator(new Addition(), new Subtraktion(),new Mulitplikation(),new Division());
 
             new KonsolenUI(parser,calculator).Start();
+            // Aufgabe: Klasse Multiplikation und Division erstellen und den TR mit dem Feature erweitern
         }
 
         public struct Formel
@@ -116,6 +117,23 @@ namespace SOLID_Taschenrechner
             public int Berechne(int z1, int z2) => z1 - z2;
         }
 
+        public class Mulitplikation : IRechenart
+        {
+            public string Operator => "*";
+
+            public int Berechne(int z1, int z2)
+            {
+               return z1*z2;
+            }
+        }
+
+        public class Division : IRechenart
+        {
+            public string Operator => "/";
+
+            public int Berechne(int z1, int z2) => Convert.ToInt32(z1 / z2);
+
+        }
 
         public class KonsolenUI
         {
