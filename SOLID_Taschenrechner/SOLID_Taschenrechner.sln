@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29230.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID_Taschenrechner", "SOLID_Taschenrechner\SOLID_Taschenrechner.csproj", "{668F6788-1D26-4261-A6BF-060558B48DDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{668F6788-1D26-4261-A6BF-060558B48DDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{668F6788-1D26-4261-A6BF-060558B48DDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{668F6788-1D26-4261-A6BF-060558B48DDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{668F6788-1D26-4261-A6BF-060558B48DDF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {03B55B02-75F2-48D3-A837-B4A2EEE67ABF}
+	EndGlobalSection
+EndGlobal
