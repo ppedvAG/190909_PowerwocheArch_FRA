@@ -13,20 +13,20 @@ namespace ppedv.MajoDDD.UI.ASP.Controllers
     {
         public BookController()
         {
-            core = new Core(new EFRepository(new EFContext()));
+            core = new Core(new EFUnitOfWork(new EFContext()));
         }
         private Core core;
 
         // GET: Book
         public ActionResult Index()
         {
-            return View(core.Repository.GetAll<Book>());
+            return View(core.UoW.BookRepository.GetAll());
         }
 
         // GET: Book/Details/5
         public ActionResult Details(int id)
         {
-            return View(core.Repository.GetByID<Book>(id));
+            return View(core.UoW.BookRepository.GetByID(id));
         }
 
         // GET: Book/Create
@@ -41,8 +41,8 @@ namespace ppedv.MajoDDD.UI.ASP.Controllers
         {
             try
             {
-                core.Repository.Add(newBook);
-                core.Repository.Save();
+                core.UoW.BookRepository.Add(newBook);
+                core.UoW.Save();
                 return RedirectToAction("Index");
             }
             catch
@@ -54,7 +54,7 @@ namespace ppedv.MajoDDD.UI.ASP.Controllers
         // GET: Book/Edit/5
         public ActionResult Edit(int id)
         {
-            return View(core.Repository.GetByID<Book>(id));
+            return View(core.UoW.BookRepository.GetByID(id));
         }
 
         // POST: Book/Edit/5
@@ -63,8 +63,8 @@ namespace ppedv.MajoDDD.UI.ASP.Controllers
         {
             try
             {
-                core.Repository.Update(editedBook);
-                core.Repository.Save();
+                core.UoW.BookRepository.Update(editedBook);
+                core.UoW.Save();
 
                 return RedirectToAction("Index");
             }
@@ -77,7 +77,7 @@ namespace ppedv.MajoDDD.UI.ASP.Controllers
         // GET: Book/Delete/5
         public ActionResult Delete(int id)
         {
-            return View(core.Repository.GetByID<Book>(id));
+            return View(core.UoW.BookRepository.GetByID(id));
         }
 
         // POST: Book/Delete/5
@@ -86,8 +86,8 @@ namespace ppedv.MajoDDD.UI.ASP.Controllers
         {
             try
             {
-                core.Repository.Delete(deleteMe);
-                core.Repository.Save();
+                core.UoW.BookRepository.Delete(deleteMe);
+                core.UoW.Save();
 
                 return RedirectToAction("Index");
             }
