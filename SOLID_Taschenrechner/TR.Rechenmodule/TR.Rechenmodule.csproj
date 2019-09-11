@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{668F6788-1D26-4261-A6BF-060558B48DDF}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>SOLID_Taschenrechner</RootNamespace>
-    <AssemblyName>SOLID_Taschenrechner</AssemblyName>
+    <ProjectGuid>{62BAE439-7724-4EE2-82AB-D3008BF33189}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TR.Rechenmodule</RootNamespace>
+    <AssemblyName>TR.Rechenmodule</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -35,9 +33,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
-    <Reference Include="System.Composition.AttributedModel, Version=1.0.33.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Composition.AttributedModel.1.2.0\lib\netstandard2.0\System.Composition.AttributedModel.dll</HintPath>
-    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,22 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="KonsolenUI.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Addition.cs" />
+    <Compile Include="Division.cs" />
+    <Compile Include="Mulitplikation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
+    <Compile Include="Subtraktion.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Taschenrechner.Domain\Taschenrechner.Domain.csproj">
       <Project>{A678D548-B384-47F4-99A2-8EEEE20246F6}</Project>
       <Name>Taschenrechner.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TR.Logik\TR.Logik.csproj">
-      <Project>{40745502-4C8A-4AB0-B8D8-DAE408277F96}</Project>
-      <Name>TR.Logik</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
