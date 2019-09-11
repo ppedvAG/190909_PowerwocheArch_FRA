@@ -5,6 +5,18 @@ VisualStudioVersion = 16.0.29230.47
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID_Taschenrechner", "SOLID_Taschenrechner\SOLID_Taschenrechner.csproj", "{668F6788-1D26-4261-A6BF-060558B48DDF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{6A2E0CB5-F5EF-4B92-898F-3762EF4F1A31}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logik", "Logik", "{49CA02EF-6256-4029-96A9-C98AE1D06F08}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{381ED7E2-8FAB-4AA6-86A7-03F492708BA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taschenrechner.Domain", "Taschenrechner.Domain\Taschenrechner.Domain.csproj", "{A678D548-B384-47F4-99A2-8EEEE20246F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taschenrechner.Logik", "Taschenrechner.Logik\Taschenrechner.Logik.csproj", "{9BC4CE38-A7B5-4ABF-B131-119DA0BF73B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taschenrechner.Rechenmodule", "Taschenrechner.Rechenmodule\Taschenrechner.Rechenmodule.csproj", "{0A658775-A247-4C4F-900E-A98FACE3FC73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +27,27 @@ Global
 		{668F6788-1D26-4261-A6BF-060558B48DDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{668F6788-1D26-4261-A6BF-060558B48DDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{668F6788-1D26-4261-A6BF-060558B48DDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A678D548-B384-47F4-99A2-8EEEE20246F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A678D548-B384-47F4-99A2-8EEEE20246F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A678D548-B384-47F4-99A2-8EEEE20246F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A678D548-B384-47F4-99A2-8EEEE20246F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BC4CE38-A7B5-4ABF-B131-119DA0BF73B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BC4CE38-A7B5-4ABF-B131-119DA0BF73B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BC4CE38-A7B5-4ABF-B131-119DA0BF73B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BC4CE38-A7B5-4ABF-B131-119DA0BF73B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A658775-A247-4C4F-900E-A98FACE3FC73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A658775-A247-4C4F-900E-A98FACE3FC73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A658775-A247-4C4F-900E-A98FACE3FC73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A658775-A247-4C4F-900E-A98FACE3FC73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{668F6788-1D26-4261-A6BF-060558B48DDF} = {381ED7E2-8FAB-4AA6-86A7-03F492708BA7}
+		{A678D548-B384-47F4-99A2-8EEEE20246F6} = {6A2E0CB5-F5EF-4B92-898F-3762EF4F1A31}
+		{9BC4CE38-A7B5-4ABF-B131-119DA0BF73B6} = {49CA02EF-6256-4029-96A9-C98AE1D06F08}
+		{0A658775-A247-4C4F-900E-A98FACE3FC73} = {49CA02EF-6256-4029-96A9-C98AE1D06F08}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {03B55B02-75F2-48D3-A837-B4A2EEE67ABF}
